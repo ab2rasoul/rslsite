@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from .views import http_test
+from .views import json_test
+from rslsite.views import leader1
+from .views import player1
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('url address', 'view ')
+    path('http_test',http_test),
+    path('json_test', json_test),
+    path("leader1/", leader1),
+    path("leader1/player1", player1),
 ]

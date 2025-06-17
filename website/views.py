@@ -3,13 +3,13 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 
 def index_view(request):
-    return render(request,'home.html')
+    return render(request,'website/index.html')
 
 
 def about_view(request):
-    return render(request,'about.html')
+    return render(request,'website/about.html')
 
-def products_view(request):
-    return render(request,'products.html')
+def contact_view(request):
+    return render(request,'website/contact.html')
 
 # Create your views here.

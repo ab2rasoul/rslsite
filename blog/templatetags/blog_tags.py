@@ -12,7 +12,7 @@ def snippet(value,arg=20):
     return value[:arg] + "..."
 
 
-@register.inclusion_tag("latestposts.html")
+@register.inclusion_tag("blog/latestposts.html")
 def latestposts():
     posts = Post.objects.filter(status=1).order_by("-published_date")[:1]
     return {'posts': posts}
